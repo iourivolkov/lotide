@@ -20,12 +20,18 @@ const eqArrays = function(array1, array2){
   }
 };
 
+
 eqArrays([1, 2, 3], [1, 2, 3]); // => true
 eqArrays([1, 2, 3], [3, 2, 1]); // => false
 
 eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
 eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false 
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
+assertEqual(eqArrays([1, 2, 3], [2, 3, 4]), true); 
+assertEqual(eqArrays([""], [""]), true); 
+assertEqual(eqArrays([3], [3]), true); 
+assertEqual(eqArrays([1, 2, 3], ["1", "2", "3"]), true); 
+
 
 
