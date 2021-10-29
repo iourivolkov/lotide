@@ -27,11 +27,7 @@ console.log(findKey({
   "Akelarre":  { stars: 3 }
 }, key => key.stars === 2)); // => "noma"
 
-console.log(findKey({
-  "shiba": {breed: "dog"},
-  "tabby": {breed: "cat"},
-  "lab": {breed: "dog"}
-}, key => key.breed === "dog")); // "shiba"
+
 
 
 
