@@ -55,8 +55,9 @@ const eqObjects = (object1, object2) => {
 // ASSERTOBJECTSEQUAL FUNCTION
 // ---------------------------
 const assertObjectsEqual = (actual, expected) => {
-
+  
   const inspect = require('util').inspect;
+  console.log(`values: ${inspect(actual)}`);
   
   if(eqObjects(actual, expected) === true){
     console.log(`✅ ASSERTION PASSED: ${actual} === ${expected}`);
@@ -65,6 +66,8 @@ const assertObjectsEqual = (actual, expected) => {
     console.log(`🚨 ASSERTION FAILED: ${actual} !== ${expected}`);
   }
 };
+
+
 
 // FUNCTION CALL FOR AOE 
 // ---------------------
@@ -76,7 +79,7 @@ const dd = {b: 2, c: 6};
 assertObjectsEqual(aa, bb);
 assertObjectsEqual(aa, cc);
 
-console.log(`label: ${inspect(actual)}`);
+// inspect is not defined 
 
 // Functions that do not return values and instead print out messages to the console are more difficult to test using assertions. This is because we cannot simply compare their return value to an expected value.****
 
